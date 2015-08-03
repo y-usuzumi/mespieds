@@ -1,10 +1,50 @@
 #!/bin/sh
 
+ln_alt() {
+    if [ -L "$2" ]
+    then
+        unlink $2
+    elif [ -e "$2" ]
+    then
+        rm -rf $2
+    fi
+    ln -s "$(pwd)/$1" $2
+}
+
+usage() {
+    echo "Usage: $0 <target>"
+    echo "Target can be one of the following:"
+    echo "  emacs"
+    echo "  i3"
+    echo "  all -- run all targets"
+}
+
 emacs() {
     # Spacemacs
-    rsync -Pr spacemacs/* ~/.emacs.d/
+    ln_alt emacs/spacemacs/private ~/.emacs.d/private
 }
 
 i3() {
-    rsync -Pr i3/* ~/
+    ln_alt i3/.i3 ~/.i3
 }
+
+if [ $# -gt 0 ]
+then
+    case $1 in
+        emacs)
+            emacs
+            ;;
+        i3)
+            i3
+            ;;
+        all)
+            emacs
+            i3
+            ;;
+        *)
+            usage
+            ;;
+    esac
+else
+    usage
+fi
