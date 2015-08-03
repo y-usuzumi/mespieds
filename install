@@ -1,0 +1,10 @@
+#!/bin/sh
+
+emacs() {
+    # Spacemacs
+    rsync -Pr spacemacs/* ~/.emacs.d/
+}
+
+i3() {
+    rsync -Pr i3/* ~/
+}
