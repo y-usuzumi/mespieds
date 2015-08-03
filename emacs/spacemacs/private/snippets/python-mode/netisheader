@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: netisheader
+# key: nh
+# --
+# -*- coding: utf-8 -*-
+#
+# Copyright `(format-time-string "%Y")` Netis Technologies
+#
+
+"""${1:Summary}
+
+${2:Description}
+"""
+

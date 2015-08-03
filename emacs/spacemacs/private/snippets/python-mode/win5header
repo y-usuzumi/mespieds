@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: win5header
+# key: win5h
+# --
+# -*- coding: utf-8 -*-
+
+"""
+Copyright 2013-`(format-time-string "%Y")` Win5 Information Technology
+
+@author: ${1:`(user-full-name)`}
+@date: ${2:`(format-time-string "%Y-%m-%d")`}
+
+${3:Description}
+"""
+
+__author__ = "$1"
+

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: header
+# key: h
+# --
+# -*- coding: utf-8 -*-
+#
+# Copyright 2014-`(format-time-string "%Y")` Ratina
+#
+
+"""${1:Summary}
+
+${2:Description}
+"""
+

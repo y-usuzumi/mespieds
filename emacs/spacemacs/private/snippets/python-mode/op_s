@@ -1,0 +1,12 @@
+# -*- mode: python-mode; require-final-newline: nil -*-
+# name: operation_status
+# key: op_s
+# binding: direct-keybinding
+# --
+${1} = (
+    ${2},  # TODO
+    _OperationStatus(
+        msg='${3}',
+        args=(${4})
+    )
+)
