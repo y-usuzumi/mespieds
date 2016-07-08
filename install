@@ -28,6 +28,10 @@ i3() {
     ln_alt i3/.i3 ~/.i3
 }
 
+tmux() {
+    ln_alt tmux/.tmux.conf ~/.tmux.conf
+}
+
 if [ $# -gt 0 ]
 then
     case $1 in
@@ -36,6 +40,9 @@ then
             ;;
         i3)
             i3
+            ;;
+        tmux)
+            tmux 
             ;;
         all)
             emacs

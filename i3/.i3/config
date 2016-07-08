@@ -216,6 +216,7 @@ exec --no-startup-id xautolock -time 3 -locker "i3lock -i ~/图片/haskell_wallp
 # Terminate KDE session
 bindsym $mod+Ctrl+BackSpace exec "qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
 
+exec --no-startup-id xset r rate 250 35
 exec --no-startup-id nm-applet
 # Set screen layout
 exec --no-startup-id compton &
