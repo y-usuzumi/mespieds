@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: tospioheader
+# key: th
+# --
+# -*- coding: utf-8 -*-
+#
+# Copyright 2013-`(format-time-string "%Y")` TOSPIO
+#
+
+"""${1:Summary}
+
+${2:Description}
+"""
+
