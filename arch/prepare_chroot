@@ -1,0 +1,26 @@
+#!/bin/sh
+
+GENTOO_ROOT="/mnt/gentoo"
+
+function errcho() {
+    >&2 echo "Error: $@"
+}
+
+if [ -f $GENTOO_ROOT ]; then
+    errcho "$GENTOO_ROOT exists, but is not a directory"
+    exit 0
+fi
+
+if [ ! -d "$GENTOO_ROOT" ]; then
+    mkdir $GENTOO_ROOT
+fi
+
+if ! mount | grep $GENTOO_ROOT &> /dev/null; then
+    mount /dev/mapper/VG--DCHORUS2--00-root0 $GENTOO_ROOT
+    mount --rbind /dev $GENTOO_ROOT/dev
+    mount --make-rslave $GENTOO_ROOT/dev
+    mount -t proc /proc $GENTOO_ROOT/proc
+    mount --rbind /sys $GENTOO_ROOT/sys
+    mount --make-rslave $GENTOO_ROOT/sys
+    mount --rbind /tmp $GENTOO_ROOT/tmp
+fi
