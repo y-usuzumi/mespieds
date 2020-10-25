@@ -1,0 +1,25 @@
+# Priorities
+color.uda.priority.X=color231
+color.uda.priority.H=color255
+color.uda.priority.M=color250
+color.uda.priority.L=color245
+
+uda.priority.label=Priority
+uda.priority.type=string
+uda.priority.values=X,H,M,L,
+
+urgency.uda.priority.X.coefficient=8.1
+urgency.uda.priority.H.coefficient=6.0
+urgency.uda.priority.M.coefficient=3.9
+urgency.uda.priority.L.coefficient=1.8
+
+# Default values
+default.project=Misc
+
+# Context
+context.Amazon=project:Amazon
+
+# Aliases
+alias.@=context
+alias.+=add
+
