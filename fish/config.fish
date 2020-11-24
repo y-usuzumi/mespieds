@@ -58,5 +58,12 @@ function j
     eval (eval ".j $argv")
 end
 
+# keepassxc syncer
+function synckpxc
+    pushd ~/CONFIDENTIAL/keepass2
+    ./kpxcm
+    popd
+end
+
 # ghcup-env
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
